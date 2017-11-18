@@ -1,0 +1,42 @@
+<html>
+<head>
+<script type='text/javascript' src='jwplayer/jwplayer.js'></script>
+</head>
+
+<body scroll="no" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#000000">
+
+<div id='mediaplayer_fish'></div>
+<script type="text/javascript">
+
+var wh_width = document.body.clientWidth;
+var wh_height = document.body.clientHeight;
+
+//document.body.style.overflow='hidden';
+
+var youtube_id = 'RS6p4w8QoWY';
+
+//var youtube_id = 'Y9bbziYfh8Q';
+	 jwplayer('mediaplayer_fish').setup(
+		{
+			 'flashplayer': 'jwplayer/player.swf',
+			 'id': 'playerID',
+			 'width': wh_width,//'580',
+			 'height': wh_height,//'450',
+			 'file': youtube_id,//'ja.mp4',//youtube_id,
+			 'provider': 'youtube',
+
+	
+			  'plugins': {
+				'captions-2': {
+					'state': 'true',
+					'back': 'false',
+
+					file: 'ja.srt' 
+				},
+				'hd-2': {'state': 'true'} 
+			}
+		 }
+	);
+</script>
+</body>
+</html>
